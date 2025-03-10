@@ -64,7 +64,10 @@ header {
 header h1{
     color: var(--text--color-one);
 }
+header picture img{
+margin-right: 1rem;
 
+}
 nav ul {
     list-style-type: none;
     
