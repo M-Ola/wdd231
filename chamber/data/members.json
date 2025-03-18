@@ -1,0 +1,68 @@
+{
+  "chambers": [
+    {
+      "name": "Best Buy",
+      "address": "1000 W 78th St Ricfield, Minnesota",
+      "phone": "(612)888-0097",
+      "website": "https://www.bestbuy.com/",
+      "logo": "images/bestbuy.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "State Farm",
+      "address": "6591 nicollete Ave Ricfield, Minnesota",
+      "phone": "(952)222-6544",
+      "website": "https://www.statefarm.com/",
+      "logo": "images/statefarm.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Mall of America",
+      "address": "60 E Broadway Bloomington, Minnesota",
+      "phone": "(952)832-1109",
+      "website": "https://www.mallofamerica.com/",
+      "logo": "images/moa.png ",
+      "membership": "Gold"
+    },
+    {
+      "name": "Tunheim",
+      "address": "8009 34th Ave South, Bloomington, Minnesota",
+      "phone": "(612)666-3210",
+      "website": "https://tunheim.com/",
+      "logo": "images/tunheim.png",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Mayo Clinic",
+      "address": "200 First St. SW Rochester, MN 55905",
+      "phone": "(612)008-2134",
+      "website": "https://www.mayoclinic.org/",
+      "logo": "images/mayo.svg ",
+      "membership": "Gold"
+    },
+    {
+      "name": "Cargill",
+      "address": "P.O Box 9300, Minneapolis, Minnesota",
+      "phone": "(612)452-9077",
+      "website": "https://www.cargill.com/",
+      "logo": "images/cargill.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "https://grey-search.com/",
+      "address": "5810 Baker Road, Suite 230 Minnetonka, Minnesota",
+      "phone": "(612)671-4443",
+      "website": "https://grey-search.com/",
+      "logo": "images/grey.svg",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Gardner Bulders",
+      "address": "730 2nd Ave South, Minneapolis,Minnesota ",
+      "phoner": "(612)556-3388",
+      "website": "https://gardner-builders.com/",
+      "logo": "images/gardnerbuilders.png",
+      "membership": "Silver"
+    }
+  ]
+}
