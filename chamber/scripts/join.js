@@ -29,3 +29,10 @@ function closeModal(modalId) {
 
 const myInfo = new URLSearchParams(getString);
   */
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const timestampField = document.getElementById("timestamp");
+    timestampField.value = new Date().toISOString(); // Store timestamp in ISO format
+});
