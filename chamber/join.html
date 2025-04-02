@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+     <script src="scripts/join.js" defer></script>
+    <script src="../scripts/date.js" defer></script>
+
+     <link rel="stylesheet" href="styles/join.css">
+
+</head>
+
+
+<body>
+<header>
+    <button type="button" id="menu"></button>
+
+    <img src="images/chamber-logo.png" alt="Chamber of commerce" width="200" height="200">
+    <h1> Minnesota Chamber of Commerce </h1>
+
+</header>
+
+<nav>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="../chamber/directory.html">Chamber</a></li>
+        <li><a href="https://github.com/M-Ola/">Github Profile</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="join.html" class="active" >Join</a></li>
+       
+
+    </ul>
+</nav>
+
+
+<main>
+
+<div class="form-container">
+    <form method="GET" action="thanks.html" class="form-action-get">
+    <h2 class="sub-title-form">Membership Application</h2>
+    <label class="name-lb">
+        Name:
+    </label>
+    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required
+        placeholder="First name">
+    <input type="text" name="last" title="Enter your first name" autocomplete="given-name" required placeholder="Last name">
+    <br><br>
+    
+    <label>
+        Organizational Title:
+    </label>
+    <input type="text" name="organization" title="Enter your organizational title" autocomplete="organization-title"
+        pattern="[A-Za-z\s\-.,']{2,}" required>
+    <br><br>
+    
+    <label>
+        Email Address:
+    </label>
+    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com"
+        required>
+    <br><br>
+    
+    <label>
+        Phone Number:
+    </label>
+    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required
+        placeholder="952-789-7700">
+    <br><br>
+    
+    <label>
+        Business/Organization Name:
+    </label>
+    <input type="text" name="organizationName" title="Enter your business or organization name" autocomplete="organization"
+        required>
+    <br><br>
+    
+    <label>
+        Membership Level:
+    </label>
+    <select name="membershipLevel" required>
+        <option value="" disabled selected>Select a membership level</option>
+        <option value="NP">NP Membership (Non-Profit)</option>
+        <option value="Bronze">Bronze Membership</option>
+        <option value="Silver">Silver Membership</option>
+        <option value="Gold">Gold Membership</option>
+    </select>
+    <br><br>
+    
+    <label>
+        Business/Organization Description:
+    </label>
+    <textarea name="organizationDescription" title="Describe your business or organization" rows="4" cols="50"></textarea>
+    <br><br>
+    
+    <input type="hidden" name="timestamp" id="timestamp" value="">
+    <input type="submit" value="Join">
+   
+   
+    
+    <br><br>
+    </form>
+
+</div>
+
+<div class="section-container">
+    <h2>Membership Levels</h2>
+
+<section class="card">
+<h3>Non Profit Membership Level</h3>
+<button onclick="openModal('modal1')" >Learn More</button>
+
+</section>
+
+
+<section class="card">
+<h3>Bronze Membership Level</h3>
+<button  onclick="openModal('modal2')">Learn More</button>
+</section>
+
+
+<section class="card">
+<h3>Silver Membership Level</h3>
+<button  onclick="openModal('modal3')">Learn More</button>
+</section>
+
+
+<section class="card">
+<h3>Gold Membership Level</h3>
+<button  onclick="openModal('modal4')">Learn More</button>
+</section>
+
+</div>
+
+<dialog id="modal1" class="modal">
+    <button class="close" onclick="closeModal('modal1')">✖</button>
+    <p>Twice per year access to seminars and corporate events</p>
+</dialog>
+
+<!-- Modal 2 -->
+<dialog id="modal2" class="modal">
+    <button class="close" onclick="closeModal('modal2')">✖</button>
+    <p>Mentorship program, and discounted or free industry publications or resources.</p>
+</dialog>
+
+<!-- Modal 3 -->
+<dialog id="modal3" class="modal">
+    <button class="close" onclick="closeModal('modal3')">✖</button>
+    <p>Access Webinars and Panel discussions</p>
+</dialog>
+
+<!-- Modal 4 -->
+<dialog id="modal4" class="modal">
+    <button class="close" onclick="closeModal('modal4')">❌</button>
+    <p>Association or Organizational Awards; monthly happy hour and 
+        sports or wellness event like yoga, tennis or cycling
+</p>
+</dialog>
+
+
+</main>
+
+<footer>
+
+    <p>&copy;<span id="currentyear"></span> Monsuru Oladipo, Minnesota, USA</p>
+
+    <p id="lastmodified">Last modified:</p>
+
+
+</footer>
+    
+</body>
+</html>

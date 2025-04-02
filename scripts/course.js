@@ -1,6 +1,7 @@
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.nav-links');
+const courseDetails= document.querySelector('#course-details')
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
@@ -130,8 +131,15 @@ function filterCourses(subject) {
         }
 
         // All buttons are clickable
-        courseButton.onclick = () => alert(`${course.subject} - ${course.credits} Credits`);
+      //  courseButton.onclick = () => `${course.subject} - ${course.credits} Credits`;
+        courseButton.onclick = () => DisplayCourseDetails(course)
+       
+        
         courseList.appendChild(courseButton);
+   
+   
+   
+   
     });
 
     // Calculate the combined total credits
@@ -145,4 +153,38 @@ function filterCourses(subject) {
         courseList.appendChild(totalItem);
     }
 }
+
+
+function DisplayCourseDetails(course) {
+    
+    courseDetails.innerHTML = " ";
+    courseDetails.innerHTML = `<button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2> 
+        <h3>${course.title}</h3> 
+        <p><strong>Credits</strong>: ${course.credits}</p> 
+        <p><strong>Certificate</strong>: ${course.certificate}</p 
+        <p>${course.description}</p> <p><strong>
+            Technologies</strong>: ${course.technology.join(', ')}</p>`;
+   
+   
+    courseDetails.showModal();
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+   
+   
+    
+    
+    
+    
+    }
+
+
+
+
+
+
+
+
+
 filterCourses('ALL')

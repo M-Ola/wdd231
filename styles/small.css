@@ -40,6 +40,39 @@ main h1{
 
 }
 
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25;
+    background-color: #4a99ee;
+    box-shadow: 0 0 3rem #777;
+    width: 50%;
+    max-width: 600px;
+    color: #E8E8E8;
+   
+   
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+::backdrop{
+    background-color:rgba(126, 154, 245, 0.5);
+
+}
+
+dialog button{
+
+position:  absolute;
+top: 24px;
+right: 24px;
+padding: 0.5rem 1rem;
+border: 1px solid #9c7d7d;
+
+
+}
+
+
 
 body {
     margin: 0;

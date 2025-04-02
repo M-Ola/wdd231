@@ -308,13 +308,9 @@ footer p {
         font-weight: 500;
         color: var(--text--color-one);
 
+}
 
-    }
-
-    main {
-        grid-template-columns: 1fr;
-        margin: 0;
-    }
+    
 
     .hero img {
         width: 100%;
@@ -380,10 +376,6 @@ footer p {
 
 
 }
-
-
-
-
 
 
 /* Medium Screens  1024px) */

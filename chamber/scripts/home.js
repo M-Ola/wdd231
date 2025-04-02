@@ -169,17 +169,6 @@ fetch('data/members.json') // Make sure the JSON is saved as `data.json`
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 apiFetch()
 
 apiFetch_forecast()

@@ -1,0 +1,135 @@
+:root {
+    --background: #ffffff;
+    --color--primary: #0051A8;
+    --color--secondary: #155624;
+    --color--tertiary-one: #003E80;
+    --color--tertiary-two: #A01C2A;
+    --color--tertiary-three: #82b7ef;
+    --color--tertiary-four: #fcf0ec;
+    --text--color-one: #ffffff;
+    --text--color-two: #000000;
+
+    --heading-font: 'Roboto', sans-serif;
+    --text-font-h1: 100;
+    --text-font-h2: 300;
+    --text-font-h3: 400;
+    --text-font-h3: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+   
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(243, 245, 245);
+
+
+}
+
+
+
+
+
+
+
+
+#results {
+    background-color: #F4F1DE;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 500px;
+    height: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    min-width: 600px;
+    width: 100%;
+    gap: 2rem;
+
+
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    
+    
+
+
+
+}
+
+header {
+    background-color: var(--color--primary);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+header h1 {
+    color: var(--text--color-one);
+    font-weight: 500;
+    font-size: x-large;
+}
+
+header picture img {
+    margin-right: 1rem;
+
+}
+
+.hero img {
+    width: 100%;
+    padding-left: 1rem;
+    object-fit: cover;
+    height: 100%;
+    margin: 0;
+    border-radius: 0
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 2rem;
+
+
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--color--tertiary-one);
+    text-align: center;
+    color: var(--background);
+    justify-content: center;
+    padding: 1rem;
+    font-weight: var(--text-font-h2);
+    width: 100%;
+}
+
+footer p {
+
+    font-weight: 500;
+}
