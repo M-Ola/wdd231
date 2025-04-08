@@ -1,0 +1,423 @@
+:root {
+    --background: #ffffff;
+    --color--primary: #0051A8;
+    --color--secondary: #155624;
+    --color--tertiary-one: #003E80;
+    --color--tertiary-two: #A01C2A;
+    --color--tertiary-three: #82b7ef;
+    --color--tertiary-four: #fcf0ec;
+    --text--color-one: #ffffff;
+    --text--color-two: #000000;
+    --heading-font: 'Roboto', sans-serif;
+    --text-font-h1: 100;
+    --text-font-h2: 300;
+    --text-font-h3: 400;
+    --text-font-h3: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f0f0f0;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+header {
+    background-color: var(--color--primary);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+
+}
+
+header h1 {
+    color: var(--text--color-one);
+    font-weight: 500;
+    font-size: x-large;
+    padding-right: 1rem;
+    margin-left: 0;
+
+}
+
+header img {
+    margin-right: 5rem;
+
+
+}
+
+
+
+nav ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color--secondary);
+    list-style-type: none;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+
+
+
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--color--secondary);
+    color: var(--text--color-one);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+
+
+
+}
+
+.hero img {
+    width: 100%;
+    padding-left: 1rem;
+    object-fit: cover;
+    height: 100%;
+    margin: 0;
+    border-radius: 0
+}
+
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 2rem;
+}
+
+main {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+
+#menu {
+    display: none;
+
+}
+
+nav a:hover,
+.active {
+    color: white;
+    background-color: var(--text--color-two)
+}
+
+
+footer p {
+
+    font-weight: 500;
+}
+
+#sidebar-content {
+    flex: 1;
+    color: var(--background);
+    padding: 1rem;
+    font-weight: var(--text-font-h2);
+
+
+
+}
+
+
+#sidebar-message {
+    color: #fff;
+    font-weight: var(--text-font-h2);
+    padding: 1rem;
+
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--color--tertiary-one);
+    text-align: center;
+    color: var(--background);
+    justify-content: center;
+    padding: 1rem;
+    font-weight: var(--text-font-h2);
+    width: 100%;
+}
+
+
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+
+
+#cards-container div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    padding: 0;
+    display: grid;
+
+    grid-template-areas:
+        "name"
+        "photo"
+        "description"
+        "address";
+}
+
+
+
+
+#cards-container div img {
+    width: 100%;
+    height: auto;
+    grid-area: photo;
+
+
+
+}
+
+#cards-container div h2 {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #000;
+    grid-area: name;
+
+
+}
+
+#cards-container div p {
+    margin: 8px 10px;
+    font-size: 0.9rem;
+    color: #000;
+    grid-area: description;
+
+}
+
+#cards-container div address {
+    margin: 8px 10px;
+    font-size: 0.9rem;
+    color: #000;
+    grid-area: address;
+
+}
+
+/* Gallery Styling */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+/* Hover Effect: Zoom and Grayscale */
+.image-gallery img:hover {
+    transform: scale(1.1);
+
+    filter: grayscale(50%);
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    #cards-container div {
+        width: 100%;
+        /* Cards take full width on small screens */
+        /* background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 0;
+        display: grid; */
+        grid-template-areas:
+            "name"
+            "photo"
+            "description"
+            "address";
+    }
+
+
+    nav ul {
+
+        list-style: none;
+    }
+
+
+
+    nav a {
+
+        display: none;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--text--color-one);
+
+
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+        padding-right: 2rem;
+
+
+    }
+
+
+    #menu::before {
+        content: "☰";
+        color: #ffffff;
+
+    }
+
+    #menu.open::before {
+        content: "❌";
+    }
+
+
+    #menu {
+        display: block;
+        font-size: 1.5rem;
+        border: 0;
+        background: none;
+        color: #000;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+
+
+    ul.nav-links li a {
+        display: block;
+    }
+
+    ul.nav-links {
+        display: none;
+
+    }
+
+    ul.nav-links.open {
+        display: block;
+
+    }
+
+    header h1 {
+
+        padding-right: 0;
+
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        padding-right: 2rem;
+
+
+    }
+
+    .image-gallery img:hover {
+        transform: none;
+        filter: none;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+    #cards-container div {
+
+
+
+        grid-template-areas:
+            "photo" " name"
+            "photo" "description"
+            "photo" "address";
+
+
+
+    }
+
+
+
+
+    #cards-container div img {
+        width: 200px;
+
+
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 1210px) {
+
+    #cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+
+    #cards-container div {
+
+        grid-template-areas:
+
+            "photo" "name"
+            "photo" "description"
+            "photo" "address";
+        grid-template-rows: auto auto auto auto;
+    }
+
+
+
+
+}
