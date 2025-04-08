@@ -6,12 +6,20 @@
 
 :root {
     --background: #ffffff;
-    --color--primary: #804400;
-    --color--secondary: #FFB703;
-    --color--tertiary: #023047;
+    --color--primary: #0051A8;
+    --color--secondary: #155624;
+    --color--tertiary-one: #003E80;
+    --color--tertiary-two: #A01C2A;
+    --color--tertiary-three: #82b7ef;
+    --color--tertiary-four: #fcf0ec;
     --text--color-one: #ffffff;
     --text--color-two: #000000;
 
+    --heading-font: 'Roboto', sans-serif;
+    --text-font-h1: 100;
+    --text-font-h2: 300;
+    --text-font-h3: 400;
+    --text-font-h3: 500;
 }
 
 
@@ -40,13 +48,13 @@ header {
     font-size: 1.55rem;
     text-align: center;
     padding: 20px;
-    background-color: var(--color--primary);
+    background-color: var(--color--primary)
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    background: var(--color--tertiary);
+    background: var(--color--primary);
     text-align: center;
     color: var(--color--tertiary);
     justify-content: center;
@@ -91,11 +99,11 @@ div {
 .color-secondary {
     background-color: var(--color--secondary);
     border-radius: 5px;
-    color: #000000;
+    color: #fff;
 }
 
 .color-tertiary {
-    background-color: var(--color--tertiary);
+    background-color: var(--color--tertiary-one);
     border-radius: 5px;
     color: #ffffff;
 }
