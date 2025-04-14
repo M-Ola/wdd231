@@ -136,9 +136,8 @@ nav ul {
 }
 
 
-
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--color--tertiary-two);
 }
 
 .landing {
@@ -513,6 +512,7 @@ footer ul li a {
     .landing {
         margin: 2rem;
     }
+
 }
 
 
