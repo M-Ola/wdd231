@@ -10,6 +10,7 @@
     <meta property="og:title" content="One Stop Movies| Monsuru Oladipo">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles/movies.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <script src="scripts/search.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <link rel="icon" href="images/favicon1.ico" sizes="48x48" type="image/ico">
@@ -32,30 +33,31 @@
         </ul>
     </nav>
     <main>
-        <section>
+        <div class="section">
+            
             <input type="text" id="searchInput" placeholder="Search for a movie...">
             <button id="searchBtn">Search</button>
-        </section>
+        </div>
 
-        <section>
+        <div class="section">
             <select id="genreDropdown">
                 <option value="">Select Genre</option>
                 <!-- Genres will be dynamically populated -->
             </select>
-        </section>
+        </div>
 
-        <section>
+        <div class="section">
             <div id="searchResults">
                 <!-- Search results will appear here -->
             </div>
-        </section>
+        </div>
 
-        <section>
+        <div class="section">
             <h2>Recommended Movies</h2>
             <div id="recommendations">
                 <!-- Recommendations will appear here -->
             </div>
-        </section>
+        </div>
 
     </main>
     <footer>
