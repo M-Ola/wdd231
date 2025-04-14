@@ -1,0 +1,518 @@
+:root {
+    /* Colors */
+    --primary-color: #0051A8;
+    /* Bright blue */
+    --secondary-color: #155624;
+    --color--tertiary-one: #003E80;
+    --color--tertiary-two: #A01C2A;
+    --color--tertiary-three: #82b7ef;
+    --text--color-one: #ffffff;
+    --text--color-two: #000000;
+    --background-color: #121212;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+    --text-font-h1: 100;
+    --text-font-h2: 300;
+    --text-font-h3: 400;
+    --text-font-h4: 500;
+
+    /* Spacing */
+    --padding: 10px;
+    --border-radius: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text--color-one);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text--color-one);
+    padding: var(--padding);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin: 0.5rem;
+
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 7px;
+
+
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+    position: relative;
+
+
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 500;
+   color: var(--text--color-one);
+
+}
+
+nav a:hover,
+.active {
+    color: white;
+    background-color: rgb(14, 13, 13);
+    padding: 0.5rem;
+
+}
+.container {
+    max-width: 90%;
+    /* Maintain flexibility */
+    margin: auto;
+    padding: var(--padding);
+}
+
+.container h2 {
+    display: flex;
+    align-items: center;
+    padding: 1rem 24rem;
+    font-weight: var(--text-font-h4);
+    color: var(--text--color-one);
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--color--secondary);
+    color: var(--text--color-one);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-direction: row;
+    background-color: var(--secondary-color);
+
+
+}
+
+
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.landing {
+    text-align: center;
+    margin: 4rem;
+
+}
+
+#menu {
+    display: none;
+
+}
+
+
+
+.landing h1 {
+    font-size: 2.5em;
+    font-weight: var(--text-font-h3);
+    color: var(--text--color-one);
+}
+
+.landing p {
+    font-size: 1.2em;
+    margin: var(--padding) 0;
+}
+
+#movieGrid,
+#favoritesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--padding);
+    margin: var(--padding);
+}
+
+#searchResults,
+#recommendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+
+
+.movie-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    width: 200px;
+
+
+}
+
+.movie-card h3 {
+    font-weight: var(--text-font-h3);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    background-color: var(--hover-color);
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    /* Add space between sections */
+}
+
+/* Styling the search box */
+#searchInput {
+    width: 300px;
+    
+    padding: 5px;
+    /* Add padding for a better look */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-bottom: 15px;
+    
+    font-size: 16px;
+    /* Increase font size */
+}
+
+/* Styling the dropdown menu */
+#genreDropdown {
+    width: 300px;
+    /* Match width with search box */
+    padding: 5px;
+    /* Add padding */
+    border: 1px solid #ccc;
+    /* Border styling */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size for readability */
+    margin-bottom: 15px;
+    /* Add space below dropdown */
+    background-color: #f4f4f4;
+    /* Light background for dropdown */
+}
+
+/* Styling the search button */
+#searchBtn {
+    background-color: var(--secondary-color);
+    /* Use the secondary color variable */
+    color: var(--text-color);
+    /* Light text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Add padding */
+    cursor: pointer;
+    font-size: 16px;
+    /* Font size for better usability */
+}
+
+#searchBtn:hover {
+    background-color: var(--secondary-color)
+    /* Slightly darker hover effect */
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--padding);
+}
+
+#sidebar-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    color: var(--background);
+    padding: 1rem;
+    font-weight: var(--text-font-h2);
+
+}
+
+
+#sidebar-message {
+    color: #fff;
+    font-weight: var(--text-font-h3);
+    padding: 1rem;
+
+}
+
+
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+}
+
+footer p {
+    margin: 5px 0;
+
+    font-weight: 500;
+}
+
+footer a {
+    color: var(--text--color-one);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--text--color-two);
+}
+
+footer ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    font-size: 14px;
+}
+
+/* General Styling */
+
+
+/* Contact Form Section */
+#contactForm {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin: 10px 0 5px;
+    font-weight: var(--heading-font-weight);
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: #f4f4f4;
+}
+
+#contactForm button {
+    background-color: var(--text--color-one);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: var(--text-font-h2);
+}
+
+#contactForm button:hover {
+    background-color: var(--color--tertiary-one);
+    color: #ffffff;
+}
+
+
+@media (max-width: 600px) {
+      
+   
+   nav ul {
+       display: none;
+       flex-direction: column;
+       gap: 10px;
+   }
+
+   nav ul.open {
+       display: flex;
+       background-color: var(--secondary-color);
+   }
+
+   #searchInput,
+   #genreDropdown {
+       width: 90%;
+   }
+
+   .movie-card img {
+       width: 100%;
+   }
+
+   .container {
+       padding: 0.5rem;
+   }
+
+   footer ul {
+       flex-direction: column;
+       gap: 8px;
+   }
+
+ 
+
+    #contactForm form {
+        padding: 15px;
+        
+    }
+
+    #menu::before {
+        content: "☰";
+        color: #ffffff;
+        
+
+    }
+
+    #menu.open::before {
+        content: "❌";
+    }
+
+
+    #menu {
+        display: block;
+        font-size: 1.5rem;
+        border: 0;
+        background: none;
+        color: #000;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+
+    nav a {
+
+        display: none;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--text--color-one);
+    }
+
+
+ ul.nav-links li a {
+        display: block;
+    }
+
+    ul.nav-links {
+        display: none;
+
+    }
+
+    ul.nav-links.open {
+        display: block;
+
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .container h2 {
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .landing {
+        margin: 2rem;
+    }
+}
+
+

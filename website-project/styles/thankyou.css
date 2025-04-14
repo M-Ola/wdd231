@@ -1,0 +1,161 @@
+:root {
+    /* Colors */
+    --primary-color: #0051A8;
+    /* Bright blue */
+    --secondary-color: #155624;
+    --color--tertiary-one: #003E80;
+    --color--tertiary-two: #A01C2A;
+    --color--tertiary-three: #82b7ef;
+    --text--color-one: #ffffff;
+    --text--color-two: #000000;
+    --background-color: #121212;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --font-family: 'Roboto', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+    --text-font-h1: 100;
+    --text-font-h2: 300;
+    --text-font-h3: 400;
+    --text-font-h4: 500;
+
+    /* Spacing */
+    --padding: 10px;
+    --border-radius: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+    position: relative;
+
+
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text--color-one);
+
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+footer a {
+    color: var(--text--color-one);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--text--color-two);
+}
+
+footer ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    font-size: 14px;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+/* Card Styling */
+.card {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 500px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #000000;
+
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: var(--text--color-one);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--secondary-color)
+}

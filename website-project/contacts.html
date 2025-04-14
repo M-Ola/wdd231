@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Monsuru Oladipo">
+    <meta name="description" content=" WDD 231  Website Project - Contact Page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="One Stop Movies| Monsuru Oladipo">
+    <meta property="og:type" content="website">
+    <title>Contact Us | One Stop Movies</title>
+    <link rel="stylesheet" href="styles/movies.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/contacts.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Please fill out the form below and we'll get back to you.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+
+        <section id="contactForm">
+            <h2 class="sub-title-form">Contact Us</h2>
+            <form method="GET" action="thankyou.html" class="form-action-get">
+                <!-- Name Field -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your Name" required>
+
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Your Email" required>
+
+                <!-- Message Field -->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Contact Us</button>
+            </form>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Monsuru Oladipo, Minnesota, USA</p>
+        <p id="lastmodified">Last modified:</p>
+        <p>Powered by <a href="https://www.themoviedb.org/" target="_blank">TMDb API</a></p>
+        <ul>
+            <li><a href="https://www.themoviedb.org/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://www.themoviedb.org/terms-of-use">Terms of Service</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>
