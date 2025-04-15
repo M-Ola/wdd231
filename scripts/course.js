@@ -156,7 +156,6 @@ function filterCourses(subject) {
 
 
 function DisplayCourseDetails(course) {
-    
     courseDetails.innerHTML = " ";
     courseDetails.innerHTML = `<button id="closeModal">❌</button>
     <h2>${course.subject} ${course.number}</h2> 
@@ -170,14 +169,11 @@ function DisplayCourseDetails(course) {
     courseDetails.showModal();
     closeModal.addEventListener("click", () => {
         courseDetails.close();
+    
+    
     });
    
-   
-    
-    
-    
-    
-    }
+ }
 
 
 

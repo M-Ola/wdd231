@@ -98,6 +98,7 @@ nav a:hover,
     /* Maintain flexibility */
     margin: auto;
     padding: var(--padding);
+
 }
 
 .container h2 {
@@ -399,6 +400,43 @@ footer ul li a {
 #contactForm button:hover {
     background-color: var(--color--tertiary-one);
     color: #ffffff;
+}
+/* Dialog Styling */
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25;
+    background-color: #1d1c1c;
+    box-shadow: 0 0 3rem #777;
+    width: 100%;
+    max-width: 600px;
+    color: #E8E8E8;
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+::backdrop {
+    background-color: rgba(126, 154, 245, 0.5);
+
+}
+
+dialog button {
+
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #9c7d7d;
+
+
+}
+#favoritesGrid{
+display: flex;
+align-items: center;
+padding-left: 25rem;
+
+
 }
 
 

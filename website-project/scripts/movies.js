@@ -1,5 +1,6 @@
 
 const apiKey = 'ca4b292d69c9921620e1b60c182403b0';
+const courseDetails = document.querySelector('#favoriteDialog')
 
 // Fetch and display popular movies
 const fetchMovies = () => {
@@ -10,8 +11,8 @@ const fetchMovies = () => {
 };
 
 const displayMovies = (movies) => {
-    const movieGrid = document.getElementById('movieGrid');
-    movieGrid.innerHTML = ''; // Clear previous results
+   const movieGrid = document.getElementById('movieGrid');
+   movieGrid.innerHTML = ''; // Clear previous results
 
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
@@ -22,7 +23,10 @@ const displayMovies = (movies) => {
       <p>Rating: ${movie.vote_average}</p>
       <button onclick='addFavorite(${JSON.stringify(movie)})'>Add to Favorites</button>
     `;
+       
         movieGrid.appendChild(movieCard);
+        DisplayCourseDetails(movie)
+   
     });
 };
 
@@ -32,9 +36,9 @@ const addFavorite = (movie) => {
     if (!favorites.some(fav => fav.id === movie.id)) {
         favorites.push(movie);
         localStorage.setItem('favorites', JSON.stringify(favorites));
-        alert(`${movie.title} added to favorites!`);
+       DisplayCourseDetails(movie);
     } else {
-        alert(`${movie.title} is already in favorites!`);
+     alert(`${movie.title} is already in favorites!`);
     }
 };
 
@@ -51,6 +55,22 @@ hamButton.addEventListener('click', () => {
 });
 
 
+function DisplayCourseDetails(movie) {
+
+    courseDetails.innerHTML = " ";
+    courseDetails.innerHTML = `<button id="closeModal">❌</button>
+    <h3>Title: ${movie.title}   </h3> <p>Added to favorite</p><br>
+     <p>${movie.overview}</p>`;
+
+
+    courseDetails.showModal();
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+
+
+    });
+
+}
 
 
 
