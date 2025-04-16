@@ -1,6 +1,6 @@
 
 const apiKey = 'ca4b292d69c9921620e1b60c182403b0';
-const courseDetails = document.querySelector('#favoriteDialog')
+const movieDetails = document.querySelector('#favoriteDialog')
 
 // Fetch and display popular movies
 const fetchMovies = () => {
@@ -35,7 +35,7 @@ const addFavorite = (movie) => {
     if (!favorites.some(fav => fav.id === movie.id)) {
         favorites.push(movie);
         localStorage.setItem('favorites', JSON.stringify(favorites));
-       DisplayCourseDetails(movie);
+       DisplayMovieDetails(movie);
     } else {
      alert(`${movie.title} is already in favorites!`);
     }
@@ -54,17 +54,17 @@ hamButton.addEventListener('click', () => {
 });
 
 
-function DisplayCourseDetails(movie) {
+function DisplayMovieDetails(movie) {
 
-    courseDetails.innerHTML = " ";
-    courseDetails.innerHTML = `<button id="closeModal">❌</button>
+    movieDetails.innerHTML = " ";
+    movieDetails.innerHTML = `<button id="closeModal">❌</button>
     <h3>Title: ${movie.title}   </h3> <p>Added to favorite</p><br>
      <p>${movie.overview}</p>`;
 
 
-    courseDetails.showModal();
+    movieDetails.showModal();
     closeModal.addEventListener("click", () => {
-        courseDetails.close();
+        movieDetails.close();
 
 
     });
