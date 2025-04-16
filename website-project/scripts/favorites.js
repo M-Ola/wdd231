@@ -8,7 +8,7 @@ const displayFavorites = () => {
 
     const favorites = getFavorites();
     if (favorites.length === 0) {
-        favoritesGrid.innerHTML = '<p style="">No favorite movies yet.</p>';
+       
         return;
     }
 

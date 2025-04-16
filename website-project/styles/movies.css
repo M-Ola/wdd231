@@ -428,16 +428,11 @@ dialog button {
     right: 16px;
     padding: 0.5rem 1rem;
     border: 1px solid #9c7d7d;
+   
 
 
 }
-#favoritesGrid{
-display: flex;
-align-items: center;
-padding-left: 25rem;
-
-
-}
+ 
 
 
 @media (max-width: 600px) {

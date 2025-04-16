@@ -13,19 +13,18 @@ const fetchMovies = () => {
 const displayMovies = (movies) => {
    const movieGrid = document.getElementById('movieGrid');
    movieGrid.innerHTML = ''; // Clear previous results
-
     movies.forEach(movie => {
         const movieCard = document.createElement('div');
         movieCard.className = 'movie-card';
         movieCard.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy" >
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy">
       <h3>${movie.title}</h3>
       <p>Rating: ${movie.vote_average}</p>
       <button onclick='addFavorite(${JSON.stringify(movie)})'>Add to Favorites</button>
     `;
        
         movieGrid.appendChild(movieCard);
-        DisplayCourseDetails(movie)
+       // DisplayCourseDetails(movie)
    
     });
 };
